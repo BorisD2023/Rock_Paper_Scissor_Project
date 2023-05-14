@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock_Paper_Scissors</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <section class="firstSection">
+                <h2>How many rounds?</h2>
+                <label class="switch" onchange="changeStyle()">
+                    <input type="checkbox" class="checkBox">
+                    <span class="slider round"></span>
+                  </label>
+                    <form action="#" onchange="roundsToPlay();return false">
+                        <p class="counter"></p>
+                        <article class="radio-btn">
+                            <div>
+                                <input type="radio" name="rounds" id="five" value="5">
+                                <label for="five">5</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="rounds" id="ten" value="10">
+                                <label for="ten">10</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="rounds" id="fifteen" value="15">
+                                <label for="fifteen">15</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="rounds" id="twenty" value="20">
+                                <label for="twenty">20</label>
+                            </div>
+                        </article>
+                    </form>
+            </section>
+            <section>
+                <article>
+                    <h1>HUMAN</h1>
+                    <p class="human"></p>
+                </article>
+                <article>
+                    <p class="human-win">0</p>
+                    <p>:</p>
+                    <p class="ai-win">0</p>
+                </article>
+                <article>
+                    <h1>AI</h1>
+                </article>
+            </section>
+                <p class="output">Let´s Play!</p>
+            <section class="btn">
+                <button type="button" id="stein" value="0" onclick="stoneButton()"><img src="./assets/img/granate-removebg-preview (1).png" alt="stein">Stone</button>
+                <button type="button" id="papier" value="1" onclick="paperButton()"><img src="./assets/img/shield__1_-removebg-preview (1).png" alt="papier">Paper</button>
+                <button type="button" id="schere" value="2" onclick="scissorButton()"><img src="./assets/img/gun-removebg-preview (1).png" alt="schere">Scissor</button>
+            </section>
+            <h2 class="stay">STAY ALIVE!</h2>
+            <button type="reset" id="reset-btn">Restart</button>
+        </div>
+    </main>
+
+
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+</body>
+</html>
