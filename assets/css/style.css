@@ -1,7 +1,7 @@
 /* General Settings */
 @font-face {
     font-family: neutronium;
-    src: url("/assets/fonts/Neutronium.ttf");
+    src: url("../fonts/Neutronium.ttf");
 }
 
 *{
@@ -68,7 +68,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: url("/assets/img/bg.jpeg") center no-repeat;
+    background: url("../img/bg.jpeg") center no-repeat;
     background-size: cover;
 }
 
@@ -97,13 +97,13 @@ section{
 .firstSection{
     text-align: center;
     padding-bottom: 2vw;
-    background: url("/assets/img/bg2.jpeg") no-repeat center;
+    background: url("../img/bg2.jpeg") no-repeat center;
     background-size: 100% 100%;
     margin-bottom: 3vw;
 }
 
 section:nth-child(2){
-    background: url("/assets/img/bg3.jpeg") no-repeat center;
+    background: url("../img/bg3.jpeg") no-repeat center;
     background-size: 100% 100%;
 }
 
@@ -357,12 +357,12 @@ input:checked + .slider:before {
   /* Style change */
 
 .style-change{
-    background: url("/assets/img/bg2.jpeg") no-repeat center;
+    background: url("../img/bg2.jpeg") no-repeat center;
     background-size: cover;
 }
 
 .background{
-    background: url("/assets/img/bg.jpeg") no-repeat center;
+    background: url("../img/bg.jpeg") no-repeat center;
     background-size: 200% 230%;
 }
 
