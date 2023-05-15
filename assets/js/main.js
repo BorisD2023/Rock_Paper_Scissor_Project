@@ -3,10 +3,11 @@
 // const paperBtn = document.querySelector("#papier");
 // const scissorBtn = document.querySelector("#schere");
 // Output einbinden
-let outputHumanWin = document.querySelector(".human-win")
-let outputAiWin = document.querySelector(".ai-win")
-let mainOutput = document.querySelector(".output")
+let outputHumanWin = document.querySelector(".human-win");
+let outputAiWin = document.querySelector(".ai-win");
+let mainOutput = document.querySelector(".output");
 let counter = document.querySelector(".counter");
+const btn = document.querySelector(".btn");
 
 // Variablen vergeben
 // Schere, Stein, Papier Variable
@@ -152,6 +153,8 @@ const whoWin = () => {
     }else{
         console.log("DRAW!");
         mainOutput.innerHTML = `It´s a <span>DRAW!</span> You both chose ${humanChoose}.`
+        winCountAi += 1;
+        winCountHuman += 1;
     }
     // Gewinnanzahl ins HTML schreiben
     outputHumanWin.innerHTML = winCountHuman;
@@ -217,10 +220,13 @@ const aiTurn = () => {
 const winCounter = () => {
     if (winCountHuman > winCountAi) {
         mainOutput.innerHTML = "<strong>Human</strong> winns!<br>AI: <span>I will be back!</span>";
+        gameOver();
     }else if (winCountAi > winCountHuman){
         mainOutput.innerHTML = "<span>Terminator</span> winns!<br>AI: <span>Hasta la vista, baby!</span>";
+        gameOver();
     } else{
         mainOutput.innerHTML = "It`s a draw!<br>AI: <span>The Armageddon will come!</span>";
+        gameOver();
     }
 }
 
@@ -234,6 +240,7 @@ document.querySelector("#reset-btn").addEventListener("click", () => {
     outputAiWin.innerHTML = "0"
     document.querySelector(".radio-btn").style.display = "grid";
     mainOutput.innerHTML = "Let´s Play!"
+    btn.classList.remove("remove-btn")
 })
 
 // Style Change
@@ -249,4 +256,8 @@ const changeStyle = () =>{
         document.querySelector("main").classList.remove("style-change") 
         document.querySelector(".firstSection").classList.remove("background") 
     }
+}
+
+const gameOver = () =>{
+    btn.classList.add("remove-btn")
 }

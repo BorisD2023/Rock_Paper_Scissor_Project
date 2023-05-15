@@ -1,7 +1,7 @@
 /* General Settings */
 @font-face {
     font-family: neutronium;
-    src: url(/assets/fonts/Neutronium.ttf);
+    src: url("./assets/fonts/Neutronium.ttf");
 }
 
 *{
@@ -36,6 +36,7 @@ h2{
     font-size: 3vw;
     padding: 2vw 1vw;
     background: linear-gradient(to top right, #008080 0%, #FFFFFF 25%, #05C1FF 50%, #FFFFFF 75%, #005757 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -67,7 +68,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: url(/assets/img/bg.jpeg) center no-repeat;
+    background: url("./assets/img/bg.jpeg") center no-repeat;
     background-size: cover;
 }
 
@@ -96,13 +97,13 @@ section{
 .firstSection{
     text-align: center;
     padding-bottom: 2vw;
-    background: url(/assets/img/bg2.jpeg) no-repeat center;
+    background: url("./assets/img/bg2.jpeg") no-repeat center;
     background-size: 100% 100%;
     margin-bottom: 3vw;
 }
 
 section:nth-child(2){
-    background: url(/assets/img/bg3.jpeg) no-repeat center;
+    background: url("./assets/img/bg3.jpeg") no-repeat center;
     background-size: 100% 100%;
 }
 
@@ -224,6 +225,7 @@ input{
 label{
     font-size: 3vw;
     background: linear-gradient(to top right, #008080 0%, #FFFFFF 25%, #05C1FF 50%, #FFFFFF 75%, #005757 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -254,7 +256,7 @@ sub{
 
 section button:hover{
     transform: scale(1.5);
-    transition:  0.5s ease-in;
+    transition:  0.25s ease-in;
     background:none;
     border: none;
     box-shadow: none;
@@ -355,11 +357,15 @@ input:checked + .slider:before {
   /* Style change */
 
 .style-change{
-    background: url(/assets/img/bg2.jpeg) no-repeat center;
+    background: url("./assets/img/bg2.jpeg") no-repeat center;
     background-size: cover;
 }
 
 .background{
-    background: url(/assets/img/bg.jpeg) no-repeat center;
+    background: url("./assets/img/bg.jpeg") no-repeat center;
     background-size: 200% 230%;
+}
+
+.remove-btn{
+    display: none;
 }
